@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="web.master.cs" Inherits="dotnet_webform_site.layouts.web" %>
+<%@ Register Src="~/controls/navigation.ascx" TagName="navigation" TagPrefix="nav" %>
+
+<!doctype html>
+<html lang="en">
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
+	<link rel="stylesheet" type="text/css" href="<%=Application["styles"]%>web.css" />
+</head>
+<body>
+    <nav:navigation ID="navigation1" runat="server" />
+
+	<div class="container">
+        <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+	</div>
+
+	<script type="text/javascript" src="<%=Application["jquery"]%>jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="<%=Application["bootstrap"]%>bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+C:\Users\peter ctr morrison\Documents\Visual Studio 2013\Projects\dotnet-webform-site\dotnet-webform-site\bin\dotnet-webform-site.dll.config
+C:\Users\peter ctr morrison\Documents\Visual Studio 2013\Projects\dotnet-webform-site\dotnet-webform-site\bin\dotnet-webform-site.dll
+C:\Users\peter ctr morrison\Documents\Visual Studio 2013\Projects\dotnet-webform-site\dotnet-webform-site\bin\dotnet-webform-site.pdb
+C:\Users\peter ctr morrison\Documents\Visual Studio 2013\Projects\dotnet-webform-site\dotnet-webform-site\obj\Debug\dotnet-webform-site.csprojResolveAssemblyReference.cache
+C:\Users\peter ctr morrison\Documents\Visual Studio 2013\Projects\dotnet-webform-site\dotnet-webform-site\obj\Debug\dotnet-webform-site.dll
+C:\Users\peter ctr morrison\Documents\Visual Studio 2013\Projects\dotnet-webform-site\dotnet-webform-site\obj\Debug\dotnet-webform-site.pdb
