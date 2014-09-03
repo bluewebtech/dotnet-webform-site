@@ -60,6 +60,7 @@
     <Content Include="layouts\web.master" />
     <Content Include="missing.aspx" />
     <Content Include="readme.md" />
+    <Content Include="templates\email-contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,7 +81,8 @@
     <Content Include="resources\styles\bootstrap.css" />
     <Content Include="resources\styles\bootstrap.min.css" />
     <Content Include="resources\styles\web.css" />
-    <Content Include="templates\email-contact.aspx" />
+    <Content Include="template.aspx" />
+    <None Include="templates\test.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,8 +93,11 @@
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
     </Compile>
+    <Compile Include="classes\Format.cs" />
     <Compile Include="classes\Mail.cs" />
     <Compile Include="classes\Path.cs" />
+    <Compile Include="classes\Strings.cs" />
+    <Compile Include="classes\Template.cs" />
     <Compile Include="classes\View.cs" />
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -133,12 +138,12 @@
       <DependentUpon>missing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="templates\email-contact.aspx.cs">
-      <DependentUpon>email-contact.aspx</DependentUpon>
+    <Compile Include="template.aspx.cs">
+      <DependentUpon>template.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="templates\email-contact.aspx.designer.cs">
-      <DependentUpon>email-contact.aspx</DependentUpon>
+    <Compile Include="template.aspx.designer.cs">
+      <DependentUpon>template.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

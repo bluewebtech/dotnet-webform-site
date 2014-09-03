@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+using System.Text.RegularExpressions;
 using System.Net;
 using System.Net.Mail;
-using System.Web;
 
 namespace dotnet_webform_site.classes
 {
@@ -16,13 +14,21 @@ namespace dotnet_webform_site.classes
 
         protected static Boolean credentials = false;
 
-        public static Boolean send(Hashtable data)
+        /**
+         * Send the mail message.
+         * 
+         * @param Hashtable data
+         * 
+         * return Boolean
+         */
+        public static Boolean send(System.Collections.Hashtable data)
         {
             try {
-                string to = (string)data["to"];
-                string subject = (string)data["subject"];
-                string body = (string)data["body"];
-                Boolean template = (Boolean)data["template"];
+                string to = (string) data["to"];
+                string subject = (string) data["subject"];
+                string body = (string) data["body"];
+                Hashtable values = (Hashtable)data["data"];
+                Boolean template = (Boolean) data["template"];
 
                 var mail = new MailMessage();
                 mail.To.Add(new MailAddress(to));
@@ -32,7 +38,7 @@ namespace dotnet_webform_site.classes
                 if(!template) {
                     mail.Body = body;
                 } else {
-                    mail.Body = View.make(body);
+                    mail.Body = View.make(body, values);
                 }
 
                 var mailclient = new SmtpClient();
@@ -42,8 +48,8 @@ namespace dotnet_webform_site.classes
 
                 return true;
             } catch (Exception ex) {
-                HttpContext.Current.Response.Write(ex.Message);
-                HttpContext.Current.Response.Write(ex.StackTrace);
+                System.Web.HttpContext.Current.Response.Write(ex.Message);
+                System.Web.HttpContext.Current.Response.Write(ex.StackTrace);
 
                 return false;
             }

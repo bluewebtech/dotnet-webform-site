@@ -19,20 +19,27 @@ namespace dotnet_webform_site
         {
             title = "Contact";
 
-            if(IsPostBack) {
-                String fullName = Request["fullName"];
-                String email = Request["email"];
-                String telephone = Request["telephone"];
+            if(IsPostBack) {  
                 String comments = Request["comments"];
-
+                String email = Request["email"];
+                String fullName = Request["fullName"];
+                String telephone = Request["telephone"];
+                
                 Hashtable data = new Hashtable();
-                data.Add("to", "bwt.bluewebtech@gmail.com");
-                data.Add("from", "bwt.bluewebtech@gmail.com");
-                data.Add("subject", "Test Subject");
-                data.Add("body", "email-contact");
-                data.Add("template", true);
+                data.Add("comments", comments);
+                data.Add("email", email);
+                data.Add("fullName", Format.upperCaseWords(fullName));
+                data.Add("telephone", Format.telephone(telephone));
 
-                Mail.send(data);
+                Hashtable mail = new Hashtable();
+                mail.Add("body", "email-contact");
+                mail.Add("data", data);
+                mail.Add("from", "bwt.bluewebtech@gmail.com");
+                mail.Add("subject", "Test Subject");
+                mail.Add("template", true);
+                mail.Add("to", "bwt.bluewebtech@gmail.com");
+  
+                Mail.send(mail);
             }
         }
 

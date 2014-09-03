@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace dotnet_webform_site.templates {
+namespace dotnet_webform_site {
     
     
-    public partial class email_contact {
+    public partial class template {
     }
 }

@@ -9,26 +9,26 @@
 <asp:Content ContentPlaceHolderId="content" runat="server">
 <h2><%=title%></h2>
 <% if(!IsPostBack) { %>
-<form name="contact" id="Form1" role="form" method="post" runat="server">
-    <div class="form-group">
-        <label for="fullName">Full Name:</label>
-        <input type="text" name="fullName" id="fullName" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="telephone">Telephone</label>
-        <input type="text" name="telephone" id="telephone" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="comments">Comments / Questions:</label>
-       <textarea  name="comments" id="comments" class="form-control"></textarea>
-    </div>
-    <button type="submit" name="process" id="process" class="btn btn-primary">Process</button>
-</form>
+    <form name="contact" id="Form1" role="form" method="post" runat="server">
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" name="fullName" id="fullName" class="form-control" value="bob barker" />
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" class="form-control" value="bob.barker@gmail.com" />
+        </div>
+        <div class="form-group">
+            <label for="telephone">Telephone</label>
+            <input type="text" name="telephone" id="telephone" class="form-control" value="(555) 555-5555" />
+        </div>
+        <div class="form-group">
+            <label for="comments">Comments / Questions:</label>
+           <textarea  name="comments" id="comments" class="form-control">Your site sucks!</textarea>
+        </div>
+        <button type="submit" name="process" id="process" class="btn btn-primary">Process</button>
+    </form>
 <% } else { %>
-<p>Contact Form Processed Successfully!</p>
+    <p>Contact Form Processed Successfully!</p>
 <% } %>
 </asp:Content>

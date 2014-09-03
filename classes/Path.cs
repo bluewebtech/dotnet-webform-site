@@ -1,4 +1,6 @@
-﻿namespace dotnet_webform_site.classes
+﻿using System.Web.Hosting;
+
+namespace dotnet_webform_site.classes
 {
 
     public class Path
@@ -6,27 +8,27 @@
 
         public static string app()
         {
-            return System.Web.Hosting.HostingEnvironment.MapPath("~/app/");
+            return HostingEnvironment.MapPath("~/app/");
         }
 
         public static string controller()
         {
-            return System.Web.Hosting.HostingEnvironment.MapPath("~/app/controllers/");
+            return HostingEnvironment.MapPath("~/app/controllers/");
         }
 
         public static string model()
         {
-            return System.Web.Hosting.HostingEnvironment.MapPath("~/app/models/");
+            return HostingEnvironment.MapPath("~/app/models/");
         }
 
         public static string template()
         {
-            return System.Web.Hosting.HostingEnvironment.MapPath("~/templates/");
+            return HostingEnvironment.MapPath("~/templates/");
         }
 
         public static string view()
         {
-            return System.Web.Hosting.HostingEnvironment.MapPath("~/app/views/");
+            return HostingEnvironment.MapPath("~/app/views/");
         }
 
     }
