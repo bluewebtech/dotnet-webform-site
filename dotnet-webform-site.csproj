@@ -61,6 +61,8 @@
     <Content Include="missing.aspx" />
     <Content Include="readme.md" />
     <Content Include="templates\email-contact.cshtml" />
+    <Content Include="layouts\web.cshtml" />
+    <Content Include="templates\hello.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

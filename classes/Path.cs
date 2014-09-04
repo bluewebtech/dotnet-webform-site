@@ -8,12 +8,17 @@ namespace dotnet_webform_site.classes
 
         public static string app()
         {
-            return HostingEnvironment.MapPath("~/app/");
+            return HostingEnvironment.MapPath("~/");
         }
 
         public static string controller()
         {
             return HostingEnvironment.MapPath("~/app/controllers/");
+        }
+
+        public static string layout()
+        {
+            return HostingEnvironment.MapPath("~/");
         }
 
         public static string model()

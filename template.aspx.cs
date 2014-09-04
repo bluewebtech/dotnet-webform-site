@@ -24,7 +24,9 @@ namespace dotnet_webform_site
             data.Add("state", "California");
             data.Add("country", "United States");
 
-            Response.Write(Template.make("test", data));
+            //Response.Write(Template.make("test", data));
+
+            Template.extends("hello");
         }
 
     }

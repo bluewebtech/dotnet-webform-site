@@ -13,11 +13,11 @@ namespace dotnet_webform_site.classes
         /**
          * Return a lower cased string.
          * 
-         * @param String param
+         * @param string param
          * 
-         * return String
+         * return string
          */
-        public static String lowerCase(String param = null)
+        public static string lowerCase(string param = null)
         {
             return param.ToLower();
         }
@@ -25,11 +25,11 @@ namespace dotnet_webform_site.classes
         /**
          * Return string with the first letter lower cased.
          * 
-         * @param String param
+         * @param string param
          * 
-         * return String
+         * return string
          */
-        public static string lowerCaseFirst(String param = null)
+        public static string lowerCaseFirst(string param = null)
         {
             return char.ToLower(param[0]) + param.Substring(1);
         }
@@ -37,11 +37,11 @@ namespace dotnet_webform_site.classes
         /**
          * Return a formatted telephone number.
          * 
-         * @param String param
+         * @param string param
          * 
-         * return String
+         * return string
          */
-        public static String telephone(String param = null)
+        public static string telephone(string param = null)
         {
             return String.Format("{0:(###) ###-####}", param);
         }
@@ -49,11 +49,11 @@ namespace dotnet_webform_site.classes
         /**
          * Return a upper case string.
          * 
-         * @param String param
+         * @param string param
          * 
-         * return String
+         * return string
          */
-        public static String upperCase(String param = null)
+        public static string upperCase(string param = null)
         {
             return param.ToUpper();
         }
@@ -61,11 +61,11 @@ namespace dotnet_webform_site.classes
         /**
          * Return string with the first letter upper cased.
          * 
-         * @param String param
+         * @param string param
          * 
-         * return String
+         * return string
          */
-        public static string upperCaseFirst(String param = null)
+        public static string upperCaseFirst(string param = null)
         {
             return char.ToUpper(param[0]) + param.Substring(1);
         }
@@ -73,11 +73,11 @@ namespace dotnet_webform_site.classes
         /**
          * Return string with the first letter of each word upper cased.
          * 
-         * @param String param
+         * @param string param
          * 
-         * return String
+         * return string
          */
-        public static string upperCaseWords(String param = null)
+        public static string upperCaseWords(string param = null)
         {
             // This API path is simply ridiculous.
             return System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(param.ToLower());
